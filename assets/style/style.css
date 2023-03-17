@@ -1,1 +1,9 @@
 /* BASIC STYLES HERE */
+body {
+  background-size: cover;
+  background-position: center;
+}
+
+.blur {
+  backdrop-filter: blur(5px);
+}
