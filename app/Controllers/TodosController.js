@@ -14,7 +14,7 @@ function _drawTodos() {
 }
 
 function _totalTodos() {
-  let totalTodos = appState.todos.length
+  let totalTodos = appState.todos.filter(t => !t.completed).length
   setText('totalTodos', totalTodos)
   appState.on('todos', _totalTodos)
 }
