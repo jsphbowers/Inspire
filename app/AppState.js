@@ -8,7 +8,7 @@ class AppState extends EventEmitter {
   // values = loadState('values', [Value])
 
   /** @type {import('./Models/Todo').Todo[]} */
-  toDos = []
+  todos = []
 
   activePhoto = null
 

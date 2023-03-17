@@ -76,12 +76,14 @@
         <div class="card class p-3">
           <h5>Total = <span id="totalTodos">0</span></h5>
           <!-- STUB Todos template -->
-          <!-- <div class="form-check">
+          <section id="todosList">
+            <!-- <div class="form-check">
             <input class="form-check-input" type="checkbox" value="complete" id="complete" name="complete">
             <label class="form-check-label" for="complete" id="description">
               Default checkbox
             </label>
           </div> -->
+          </section>
           <!--  -->
           <form class="d-flex p-3" onsubmit="app.todosController.createTodo()">
             <input class="form-control" type="text" value="description" id="description" name="description" required>
