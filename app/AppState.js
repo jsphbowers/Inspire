@@ -11,6 +11,8 @@ class AppState extends EventEmitter {
   toDos = []
 
   activePhoto = null
+
+  totalNotes = 0
 }
 
 export const appState = new Proxy(new AppState(), {
