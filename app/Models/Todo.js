@@ -7,11 +7,14 @@ export class Todo {
 
   get todoTemplate() {
     return `
-    <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="complete" id="complete" name="complete">
-            <label class="form-check-label" for="complete" id="description">
-              ${this.description}
+    <div class="form-check d-flex justify-content-between">
+            <input onclick=app.todosController.updateTodo('${this.id}') class="form-check-input" type="checkbox" ${this.completed ? 'checked' : ''} value="complete" id="complete" name="complete">
+            <label class="form-check-label fw-bold" for="complete" id="description">${this.completed ? '<del>' : ''}
+              ${this.description} ${this.completed ? '</del>' : ''}
             </label>
+            <div class="">
+            <button class="btn btn-danger" onclick="app.todosController.deleteTodo('${this.id}')"><i class="mdi mdi-delete"></i></button>
+            </div>
           </div>
     `
   }
