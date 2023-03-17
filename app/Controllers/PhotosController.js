@@ -7,6 +7,7 @@ function _drawPhoto() {
   let photo = appState.activePhoto
   document.body.style.backgroundImage = `url(${photo.largeImgUrl})`
   setText('author', photo.author)
+  // FIXME THIS is where I left off, i was getting the image and author name right and then moving to weather.
 }
 
 export class PhotosController {
