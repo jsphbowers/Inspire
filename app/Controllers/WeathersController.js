@@ -8,6 +8,11 @@ function _drawWeatherC() {
   let weather = appState.activeWeather
   setHTML('weather', weather.weatherTemplateC)
 }
+
+function _drawWeatherF() {
+  let weather = appState.activeWeather
+  setHTML('weather', weather.weatherTemplateF)
+}
 export class WeathersController {
   constructor() {
     // console.log('hello from weather');
@@ -26,7 +31,11 @@ export class WeathersController {
   }
 
   toggleWeather() {
-    if (appState.activeWeather)
-
+    let currentWeather = document.getElementById('temp')?.innerText
+    if (currentWeather?.includes('C')) {
+      _drawWeatherF()
+    } else if (currentWeather?.includes('F')) {
+      _drawWeatherC()
+    }
   }
 }

@@ -9,7 +9,7 @@ export class Weather {
 
   get weatherTemplateC() {
     return `
-    <h3>${this.mainc} °C</h3>
+    <h3 id="temp">${this.mainc} °C</h3>
     <h3>${this.weather}</h3>
     <img src="https://openweathermap.org/img/wn/${this.icon}.png" alt="">
     `
@@ -17,7 +17,7 @@ export class Weather {
 
   get weatherTemplateF() {
     return `
-    <h3> ${this.mainf} °F</h3>
+    <h3 id="temp"> ${this.mainf} °F</h3>
     <h3>${this.weather}</h3>
     <img src="https://openweathermap.org/img/wn/${this.icon}.png" alt="">
     `
