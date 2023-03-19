@@ -33,20 +33,19 @@
   }
 </style>
 
-<body class="debug">
+<body class="text-light">
   <header>
 
     <section class="container-fluid">
-      <div class="col-12 d-flex justify-content-between">
+      <div class="col-12 d-flex justify-content-between p-3">
         <div>
-          <h6>Image by</h6>
-          <h6 id="author"></h6>
+          <h6 class="blur">Image by</h6>
+          <h6 class="blur" id="author"></h6>
         </div>
-        <div class="card text-center">
-          this will be the temp card
-          <h3>temp</h3>
+        <div class="blur selectable text-center p-3" onclick="app.weathersController.toggleWeather()" id="weather">
+          <!-- <h3>temp</h3>
           <h3>sunny</h3>
-          <h2>icon</h2>
+          <h2>icon</h2> -->
         </div>
       </div>
     </section>
@@ -59,10 +58,15 @@
 
           <!-- SECTION this will be the clock and the quote with author -->
           <section class="row d-flex justify-content-center">
-            <div class="col-4">
-              <div>clock</div>
-              <div>quote</div>
-              <p>author</p>
+            <div class="col-8 justify-content-center">
+              <div id="clock">
+                <h1>Clock</h1>
+              </div>
+              <div id="quote" class="blur">
+                <!-- <h5 class="quote">quote</h5>
+                <h6 id="author" class="author">author</h6> -->
+              </div>
+
             </div>
           </section>
 
@@ -75,7 +79,7 @@
     <section class="row d-flex justify-content-end">
       <div class="col-4 p-3">
         <div class="blur p-3">
-          <h5>ToDos Left = <span id="totalTodos">0</span></h5>
+          <h5>To Dos Left: <span id="totalTodos">0</span></h5>
           <!-- STUB Todos template -->
           <section id="todosList">
             <!-- <div class="form-check">

@@ -5,5 +5,26 @@ body {
 }
 
 .blur {
+  backdrop-filter: blur(4px);
+  border-radius: 15px;
+}
+
+.quote:hover+.author {
+  visibility: visible;
+  opacity: 1;
+}
+
+.author {
   backdrop-filter: blur(5px);
+  border-radius: 15px;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 1s linear;
+}
+
+.clock {
+  position: absolute;
+  bottom: 550px;
+  left: 321px;
+  font-size: 15vh;
 }

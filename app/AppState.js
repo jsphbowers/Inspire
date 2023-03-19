@@ -12,7 +12,11 @@ class AppState extends EventEmitter {
 
   activePhoto = null
 
+  activeWeather = null
+
   totalNotes = 0
+
+  activeQuote = null
 }
 
 export const appState = new Proxy(new AppState(), {
